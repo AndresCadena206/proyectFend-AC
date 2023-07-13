@@ -268,7 +268,7 @@
                     <img src="controlelec.jpg" width= 340px height= 320px>
                     <div class="overlay">
                         <h3>Control Electrico</h3>
-                        <p>Montaje y ensamble de tableros, coneccion de guardamotores, breakers, variasores,etc.</p>
+                        <p>Montaje y ensamble de tableros, coneccion de guardamotores, breakers, variadores,etc.</p>
                     </div>
                 </div>
             </div>
@@ -282,21 +282,21 @@
                  <form>
                  <div class="col">
                     <label for="nombre"></label>
-                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input class="validate" type="text" id="nombre" placeholder="Nombre" required>
                     
                     <label for="identidad"></label>
-                    <input type="text" id="identidad" placeholder="Identificacion" required>
+                    <input class="validate" type="text" id="identidad" placeholder="Identificacion" required>
                     
                     <label for="telefono"></label>
-                    <input type="text" id="telefono" placeholder="Telefono" required>
+                    <input class="validate" type="text" id="telefono" placeholder="Telefono" required>
                     
                     <label for="correo"></label>
-                    <input type="text" id="correo" placeholder="Correo" required>
+                    <input class="validate" type="text" id="correo" placeholder="Correo" required>
                     
                     <label for="direccion"></label>
-                    <input type="text" id="direccion" placeholder="Residencia" required>
+                    <input class="validate" type="text" id="direccion" placeholder="Residencia" required>
 
-                    <button id="formulario">
+                    <button id="save" type="button" onclick="saveContacto()">
                         Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>

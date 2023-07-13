@@ -1,3 +1,45 @@
+console.log("loading Javascript....")
+
+function saveContacto(){
+
+    let nombreContacto = document.getElementById("nombre");
+    let identidadContacto = document.getElementById("identidad");
+    let telefonoContacto = document.getElementById("telefono");
+    let correoContacto = document.getElementById("correo");
+    let direccionContacto = document.getElementById("direccion");
+
+    let Contacto = {
+        Nombre: nombreContacto.value,
+        Identificacion: identidadContacto.value,
+        Telefono: telefonoContacto.value,
+        Correo: correoContacto.value,
+        Residencia: direccionContacto.value,
+    }
+    console.log(Contacto);
+
+    let url = "http://localhost:8000/api/crear";
+    let params ={
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json" 
+        },
+        body: JSON.stringify(Contacto),
+    }
+
+    fetch(url,params).then(response =>{
+       
+        console.log(response);
+
+        if (response.status==201){
+            alert("registro exitoso");
+        }else{
+            alert("error registro");
+        }
+    });
+
+    return true;
+}
+
 let menuVisible = false;
 function mostrarOcultarMenu(){
     if(menuVisible){
